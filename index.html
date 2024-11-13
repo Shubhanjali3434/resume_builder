@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="John Doe" required>
+
+            <label for="title">Job Title</label>
+            <input type="text" id="title" placeholder="Software Engineer" required>
+
+            <label for="experience">Experience</label>
+            <textarea id="experience" rows="4" placeholder="Describe your experience..." required></textarea>
+
+            <label for="education">Education</label>
+            <textarea id="education" rows="4" placeholder="Describe your education..." required></textarea>
+
+            <label for="skills">Skills</label>
+            <input type="text" id="skills" placeholder="JavaScript, HTML, CSS" required>
+
+            <button type="button" onclick="generatePDF()">Download Resume</button>
+        </form>
+
+        <div id="preview" class="preview">
+            <h2>Resume Preview</h2>
+            <p><strong>Name:</strong> <span id="previewName"></span></p>
+            <p><strong>Title:</strong> <span id="previewTitle"></span></p>
+            <p><strong>Experience:</strong> <span id="previewExperience"></span></p>
+            <p><strong>Education:</strong> <span id="previewEducation"></span></p>
+            <p><strong>Skills:</strong> <span id="previewSkills"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
